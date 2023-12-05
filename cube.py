@@ -201,6 +201,10 @@ class cube:
                 )
             )
 
+        fig.update_layout(scene=dict(xaxis=dict(title = '', showticklabels=False)))
+        fig.update_layout(scene=dict(yaxis=dict(title = '', showticklabels=False)))
+        fig.update_layout(scene=dict(zaxis=dict(title = '', showticklabels=False)))
+
         fig.show()
 
     def get_integer(self):
