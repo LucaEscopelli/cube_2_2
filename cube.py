@@ -152,7 +152,16 @@ class cube:
         return color_list
 
     def plot_current_state(self):
-        fig = go.Figure()
+        # Inform the camera start position
+        layout = go.Layout(
+                scene=dict(
+                    camera=dict(
+                        eye=dict(x=1.8, y=0.8, z=0.9)
+                    )
+                )
+            )
+
+        fig = go.Figure(layout=layout)
 
         # Add fixed piece
         fig.add_trace(
